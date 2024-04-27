@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "name": "ABC Medical Clinic",
+      "address": "123 Main Street",
+      "phone": "123-456-7890",
+      "website": "https://www.abcmedicalclinic.com",
+      "description": "ABC Medical Clinic is a state-of-the-art medical facility that provides a wide range of medical services, including primary care, urgent care, and specialty care."
+    },
+    {
+      "id": 2,
+      "name": "XYZ Food Delivery",
+      "address": "456 Elm Street",
+      "phone": "123-456-7890",
+      "website": "https://www.xyzfooddelivery.com",
+      "description": "XYZ Food Delivery is a convenient and affordable way to get your favorite food delivered to your door."
+    },
+    {
+      "id": 3,
+      "name": "ABC Service Delivery",
+      "address": "789 Oak Street",
+      "phone": "123-456-7890",
+      "website": "https://www.abcservicedelivery.com",
+      "description": "ABC Service Delivery provides a wide range of services, including handyman services, plumbing services, electrical services, and carpentry services."
+    },
+    {
+      "id": 4,
+      "name": "Ace Plumbing Services",
+      "address": "321 Maple Avenue",
+      "phone": "987-654-3210",
+      "website": "https://www.aceplumbingservices.com",
+      "description": "Ace Plumbing Services is a local plumbing company that offers a wide range of plumbing services, including drain cleaning, water heater repair, and installation of new plumbing fixtures."
+    },
+    {
+      "id": 5,
+      "name": "Super Handyman Services",
+      "address": "567 Pine Street",
+      "phone": "555-555-5555",
+      "website": "https://www.superhandymanservices.com",
+      "description": "Super Handyman Services is a reliable and affordable handyman service that can handle all of your home repair and maintenance needs, from minor repairs to major renovations."
+    },
+    {
+      "id": 6,
+      "name": "Hometown Electrical Services",
+      "address": "890 Cedar Lane",
+      "phone": "123-456-7890",
+      "website": "https://www.hometownelectricalservices.com",
+      "description": "Hometown Electrical Services is a local electrical company that provides a wide range of electrical services, including electrical repairs, installations, and maintenance for both residential and commercial properties."
+    },
+    {
+      "id": 7,
+      "name": "Local Locksmith Solutions",
+      "address": "456 Oak Road",
+      "phone": "555-123-4567",
+      "website": "https://www.locallocksmithsolutions.com",
+      "description": "Local Locksmith Solutions is a trusted locksmith service provider in the area, offering emergency lockout services, lock installation, key duplication, and security system installations for both residential and commercial clients."
+    },
+    {
+      "id": 8,
+      "name": "City Carpet Cleaners",
+      "address": "789 Elm Avenue",
+      "phone": "987-654-3210",
+      "website": "https://www.citycarpetcleaners.com",
+      "description": "City Carpet Cleaners is a professional carpet cleaning service that specializes in deep cleaning and stain removal for homes and businesses. They use eco-friendly products and advanced techniques to ensure a thorough and safe cleaning experience."
+    },
+    {
+      "id": 9,
+      "name": "Green Thumb Landscaping",
+      "address": "321 Maple Lane",
+      "phone": "555-555-5555",
+      "website": "https://www.greenthumblandscaping.com",
+      "description": "Green Thumb Landscaping is a full-service landscaping company that provides lawn care, garden design, tree trimming, and outdoor living space construction services for residential and commercial properties."
+    },
+    {
+      "id": 10,
+      "name": "Local Pest Control Experts",
+      "address": "567 Pine Road",
+      "phone": "123-456-7890",
+      "website": "https://www.localpestcontrolexperts.com",
+      "description": "Local Pest Control Experts is a reliable pest control service provider, offering comprehensive solutions for pest infestations, including termite control, rodent control, and general pest management services for both homes and businesses."
+    }
+   ]
