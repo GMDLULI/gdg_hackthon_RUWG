@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyDPqp5ZwG0fEnaYkeoz0Yx-nKb3WQlpQnA")
+genai.configure(api_key="ADD_API_Key")
 
 def conversation(user):
     convo.send_message(user)
