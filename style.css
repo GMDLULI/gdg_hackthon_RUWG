@@ -1,72 +1,79 @@
+/* General Styles */
 body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
   }
   
-  h1 {
-    text-align: center;
-  }
-  
-  nav {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav li {
-    padding: 0 10px;
-  }
-  
-  nav a {
-    color: white;
-  }
-  
-  main {
+  /* Chat Container */
+  #chat-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
   }
   
-  section {
-    margin-bottom: 20px;
-  }
-  
-  section h2 {
+  /* Chat Messages */
+  .chat-message {
+    display: flex;
     margin-bottom: 10px;
   }
   
-  section ul {
-    list-style-type: none;
-    padding: 0;
+  .chat-message .bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    position: relative;
+    word-wrap: break-word;
   }
   
-  section li {
-    margin-bottom: 5px;
+  /* User Message */
+  .chat-message.user .bubble {
+    background-color: #0084ff;
+    color: #fff;
+    margin-left: auto;
   }
   
-  section a {
-    text-decoration: none;
+  /* AI Message */
+  .chat-message.ai .bubble {
+    background-color: #f1f0f0;
     color: #333;
+    margin-right: auto;
   }
   
-  footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+  /* First AI Message */
+  .chat-message.ai:first-child .bubble {
+    background-color: #e6e6e6;
+    font-weight: bold;
   }
-
-  textarea{
-    max-width: 100%;
+  
+  /* Message Tail */
+  .chat-message .bubble::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
   }
-
- #medical-services, #food-delivery, #service-delivery{
-  padding: 19px;
- }
-
- #medical-services, #food-delivery, #service-delivery a{
-  color:#333;
- }
+  
+  /* User Message Tail */
+  .chat-message.user .bubble::before {
+    right: -10px;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #0084ff;
+  }
+  
+  /* AI Message Tail */
+  .chat-message.ai .bubble::before {
+    left: -10px;
+    border-width: 5px 10px 5px 0;
+    border-color: transparent #f1f0f0 transparent transparent;
+  }
+  
+  /* First AI Message Tail */
+  .chat-message.ai:first-child .bubble::before {
+    border-color: transparent #e6e6e6 transparent transparent;
+  }

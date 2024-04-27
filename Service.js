@@ -1,77 +1,23 @@
-// Add a business
-function addBusiness(e) {
-    e.preventDefault();
-  
-    const businessName = document.getElementById('business-name').value;
-    const businessAddress = document.getElementById('business-address').value;
-    const businessPhone = document.getElementById('business-phone').value;
-    const businessWebsite = document.getElementById('business-website').value;
-    const businessDescription = document.getElementById('business-description').value;
-  
-    const businessData = {
-      name: businessName,
-      address: businessAddress,
-      phone: businessPhone,
-      website: businessWebsite,
-      description: businessDescription,
-    };
-  
-    fetch('/add-business', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(businessData),
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        // Add success or error handling here
-      })
-      .catch(err => {
-        console.error(err);
-        // Add error handling here
-      });
+const express = require('express');
+const path = require('path');
+const app = express();
+const bodyParser = require('body-parser');
+const { runChat } = require('./chat.js');
+
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.post('/chat', async (req, res) => {
+  const userInput = req.body.userInput;
+  try {
+    const response = await runChat(userInput);
+    res.send(response);
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).send('An error occurred');
   }
-  
-  // Report a fake business
-  function reportFakeBusiness(e) {
-    e.preventDefault();
-  
-    const businessId = document.getElementById('business-id').value;
-  
-    const businessData = {
-      id: businessId,
-    };
-  
-    fetch('/report-fake-business', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(businessData),
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        // Add success or error handling here
-      })
-      .catch(err => {
-        console.error(err);
-        // Add error handling here
-      });
-  }
-  
-  // Get businesses
-  function getBusinesses() {
-    fetch('/get-businesses')
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        // Populate the UI with the retrieved businesses
-      })
-      .catch(err => {
-        console.error(err);
-        // Add error handling here
-      });
-  }
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
