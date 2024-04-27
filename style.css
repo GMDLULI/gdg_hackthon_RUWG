@@ -49,6 +49,7 @@ body {
   
   section a {
     text-decoration: none;
+    color: #333;
   }
   
   footer {
@@ -57,4 +58,15 @@ body {
     padding: 10px;
     text-align: center;
   }
-  
+
+  textarea{
+    max-width: 100%;
+  }
+
+ #medical-services, #food-delivery, #service-delivery{
+  padding: 19px;
+ }
+
+ #medical-services, #food-delivery, #service-delivery a{
+  color:#333;
+ }
